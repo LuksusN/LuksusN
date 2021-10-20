@@ -1,0 +1,146 @@
+.description {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  &--left {
+    width: 100%;
+    background-color: #fbc149;
+    border-radius: 45px;
+    padding: 15px;
+    & > p {
+      text-align: justify;
+      max-width: 90%;
+      font-size: 15px;
+    }
+    & > p:last-child {
+      font-size: 13px;
+      padding-top: 5px;
+      color: #555;
+    }
+  }
+  &--right {
+    text-align: justify;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 95px;
+      position: absolute;
+      z-index: -1;
+    }
+    &::before {
+      height: 70px;
+      width: 70px;
+      background: #ef8c6d;
+      top: 25px;
+      left: 25px;
+    }
+    &::after {
+      width: 80px;
+      height: 80px;
+      background: #fbc149;
+      bottom: 30px;
+      right: 25px;
+    }
+  }
+}
+.article {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  &__title {
+    position: relative;
+    padding: 40px 0 80px;
+    & > h3 {
+      font-size: 28px;
+      position: relative;
+      z-index: 4;
+      text-align: center;
+      &::before {
+        content: "";
+        height: 23px;
+        border-radius: 95px;
+        position: absolute;
+        z-index: -1;
+        left: calc(50% - 75px);
+        bottom: 0;
+        border-radius: 95px;
+        width: 130px;
+        background-color: #adcffc;
+      }
+    }
+    & > img {
+      position: absolute;
+      top: -20px;
+      left: calc(50% - 95px);
+      max-width: 190px;
+    }
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    & > article {
+      text-align: justify;
+      padding: 0 15px;
+    }
+  }
+}
+@media screen and (min-width: 760px) {
+  .banner {
+    & > h1 {
+      padding: 200px 10% 0;
+      width: -moz-available;
+    }
+  }
+  .description {
+    flex-direction: unset;
+    &--left {
+      max-width: 450px;
+      height: fit-content;
+      height: -moz-fit-content;
+      padding: 15px 0;
+      position: relative;
+      top: -80px;
+      left: 25px;
+      & > p {
+        text-align: unset;
+        max-width: 350px;
+        margin: 0 auto;
+      }
+    }
+    &--right {
+      max-width: 300px;
+      text-align: center;
+      font-size: 15px;
+      position: relative;
+      z-index: 1;
+      padding: unset;
+    }
+  }
+  .article {
+    &__title {
+      & > h3 {
+        margin: 0 70% 0 30%;
+        text-align: unset;
+        &::before {
+          left: 5px;
+        }
+      }
+      & > img {
+        top: -20px;
+        left: 30%;
+      }
+    }
+    &__text {
+      flex-direction: unset;
+      & > article {
+        text-align: unset;
+      }
+    }
+  }
+}
