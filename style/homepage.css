@@ -1,3 +1,20 @@
+.banner {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background-image: url(../images/frontimage.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner > h1 {
+  color: #fff;
+  font-size: 80px;
+  width: 100%;
+  text-align: left;
+  padding: 200px 0 0;
+  margin: 0;
+}
 .introduction__section {
   display: flex;
   justify-content: space-around;
@@ -64,7 +81,7 @@
   border-radius: 10px;
   width: 100%;
   height: 270px;
-  object-fit: cover;
+  
 }
 .check-out__section {
   width: 100%;
@@ -118,6 +135,7 @@
   .banner > h1 {
     padding: 200px 10% 0;
     width: -moz-available;
+    width: -webkit-fill-available;
   }
   .introduction__section {
     flex-direction: unset;
